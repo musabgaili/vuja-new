@@ -8,6 +8,7 @@
     "Portfolio": "مشـاريعنا",
     "Team": "الفريق",
     "Contact": "تواصل معنا",
+
     "Client": "العميل",
     "Project information":"بيانات المشروع",
     "Portfolio Details":"تفاصيل",
@@ -30,7 +31,10 @@
 
 
     "en": "English",
-    "Ar": "العربية"
+    "Ar": "العربية",
+    "Testimonials": "آراء العملاء",
+    "call_action":"فريقنا من المختصين بانتظار اتصالك لتحويل افكارك الى واقع",
+    "Contact Us":"تــواصل معنا"
 
 
 

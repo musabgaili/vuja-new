@@ -14,6 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -42,15 +43,16 @@ class ClientResource extends Resource
         return $table
             ->columns([
                 //
-                ImageColumn::make('thumbnail')->width(0),
-                TextColumn::make('name')->width(0),
-                Toggle::make('visible'),
+                ImageColumn::make('thumbnail'),
+                TextColumn::make('name'),
+                ToggleColumn::make('visible'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

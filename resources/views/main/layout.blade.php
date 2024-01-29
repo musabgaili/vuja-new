@@ -51,7 +51,7 @@
                 <h1><a href="/" class=" d-block logo-link"
                         style="width: 880px;height: 80px;position: relative;top: -15px;"><img
                             src="{{ asset('assets/img/new-logo.png') }}" class="logo"
-                            style=" width : 100px ;height : 100px" alt=""></a></h1>
+                            style=" width : 100px ;height : 100px; margin: -10px;" alt=""></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
             </div>

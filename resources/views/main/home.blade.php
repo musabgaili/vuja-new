@@ -1,8 +1,7 @@
-@extends('main.layout',['page'=> 'home'])
+@extends('main.layout', ['page' => 'home'])
 
 
 @section('content')
-
     <!-- ======= hero Section ======= -->
     <section id="hero">
 
@@ -32,24 +31,28 @@
         <section id="about">
             <div class="container" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-lg-6 about-img">
-                        <img src="assets/img/second.jpg" alt="">
-                    </div>
 
                     <div class="col-lg-6 content">
 
-                        <h2>{{__("topic_")}}</h2>
+                        <h2>{{ __('topic_') }}</h2>
                         {{-- <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
                             anim id est laborum.</h3> --}}
 
                         <ul>
-                            <li><i class="bi bi-check-circle"></i> {{__("we_offer")['1']}}</li>
-                            <li><i class="bi bi-check-circle"></i> {{__("we_offer")['2']}}</li>
-                            <li><i class="bi bi-check-circle"></i> {{__("we_offer")['3']}}</li>
+                            <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['1'] }}</li>
+                            <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['2'] }}</li>
+                            <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['3'] }}</li>
 
                         </ul>
 
                     </div>
+                    <div class="col-lg-6 about-img">
+                        <img src="{{asset("assets/img/steps.png")}}" alt="">
+                        <div class="col-lg-3 cta-btn-container ">
+                            {{-- <a class="cta-btn btn btn-primary align-right float-right" href="#contact">{{__("Call Us")}}</a> --}}
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -72,7 +75,8 @@
                             <div class="box">
                                 <div class="icon">
                                     {{-- <i class="bi bi-briefcase"></i> --}}
-                                    <img src="{{asset('storage/'.$service->thumbnail)}}" height="64" width="87.2" alt="">
+                                    <img src="{{ asset('storage/' . $service->thumbnail) }}" height="64" width="87.2"
+                                        alt="">
                                 </div>
                                 <h4 class="title">{{ $service->name }}</h4>
                                 <p class="description">
@@ -111,7 +115,7 @@
                         @endforeach
 
 
-                        <div class="swiper-slide"><img src="assets/img/clients/client-2.png"
+                        {{-- <div class="swiper-slide"><img src="assets/img/clients/client-2.png"
                                 class="img-fluid img-fluid-clients" alt=""></div>
                         <div class="swiper-slide"><img src="assets/img/clients/client-3.png"
                                 class="img-fluid img-fluid-clients" alt=""></div>
@@ -124,7 +128,7 @@
                         <div class="swiper-slide"><img src="assets/img/clients/client-7.png"
                                 class="img-fluid img-fluid-clients" alt=""></div>
                         <div class="swiper-slide"><img src="assets/img/clients/client-8.png"
-                                class="img-fluid img-fluid-clients" alt=""></div>
+                                class="img-fluid img-fluid-clients" alt=""></div> --}}
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -156,8 +160,7 @@
                     @foreach ($portfolios as $item)
                         <div class="col-lg-4 col-md-6 portfolio-item ">
                             <a href="{{ route('portfolio.details', ['portfolio' => $item]) }}">
-                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="img-fluid"
-                                    alt="">
+                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h4>{{ $item->title }}</h4>
                                     {{-- <p>{!! Str::inlineMarkdown($item->content) !!}</p> --}}
@@ -182,94 +185,46 @@
         <section id="testimonials">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>Testimonials</h2>
-                    <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet
+                    <h2>{{ __('Testimonials') }}</h2>
+                    {{-- <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet
                         veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute
-                        nulla ipsum velit export irure minim illum fore</p>
+                        nulla ipsum velit export irure minim illum fore</p> --}}
                 </div>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
+                        @foreach ($testimonials as $te)
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        {{-- <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt=""> --}}
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                    <img src="assets/img/quote-sign-right.png" class="quote-sign-right"
-                                        alt="">
-                                </p>
-                                <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                                        {{ $te->message }}
+                                        {{-- <img src="assets/img/quote-sign-right.png" class="quote-sign-right"alt=""> --}}
+                                    </p>
+                                    {{-- <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt=""> --}}
+                                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="#1c5b63">
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                    <img src="assets/img/quote-sign-right.png" class="quote-sign-right"
-                                        alt="">
-                                </p>
-                                <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                    minim.
-                                    <img src="assets/img/quote-sign-right.png" class="quote-sign-right"
-                                        alt="">
-                                </p>
-                                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
-                                    <img src="assets/img/quote-sign-right.png" class="quote-sign-right"
-                                        alt="">
-                                </p>
-                                <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                                stroke="#1c5b63" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                    <img src="assets/img/quote-sign-right.png" class="quote-sign-right"
-                                        alt="">
-                                </p>
-                                <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                                    </svg>
+                                    <h3>{{ $te->name }}</h3>
+                                    <h4>{{ $te->company }}</h4>
+                                </div>
+                            </div><!-- End testimonial item -->
+                        @endforeach
+
+
 
                     </div>
                     <div class="swiper-pagination"></div>
@@ -283,13 +238,11 @@
             <div class="container" data-aos="zoom-out">
                 <div class="row">
                     <div class="col-lg-9 text-center text-lg-start">
-                        <h3 class="cta-title">Call To Action</h3>
-                        <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3 class="cta-title">{{__("Call Us")}}</h3>
+                        <p class="cta-text">{{__("call_action")}}</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Call To Action</a>
+                        <a class="cta-btn align-middle" href="#contact">{{__("Call Us")}}</a>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,6 @@ Route::get('portfolio/{portfolio}', [PortfolioController::class ,'details'])->na
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/contact', [ContactController::class ,'store'])->name('contact');
 
 
