@@ -57,6 +57,8 @@ class AdminPanelProvider extends PanelProvider
             ])->plugin(
                 SpatieLaravelTranslatablePlugin::make()
                     ->defaultLocales(['en', 'ar']),
-            );
+            )->plugins([
+                \BezhanSalleh\FilamentGoogleAnalytics\FilamentGoogleAnalyticsPlugin::make()
+            ]);
     }
 }
