@@ -31,3 +31,16 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/contact', [ContactController::class ,'store'])->name('contact');
+
+
+
+
+Route::get('language/{locale}', function ($locale = null) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+
+    return redirect()->back();
+})->name('locale');
+
+
+
