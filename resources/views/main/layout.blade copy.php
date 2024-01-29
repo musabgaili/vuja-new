@@ -41,56 +41,49 @@
 
 <body>
     <!-- ======= Header ======= -->
-   <!-- ======= Header ======= -->
-   <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <div id="logo" style="z-index: 100">
-        <h1>
-          <a
-            href="index.html"
-            class="d-block logo-link"
-            style="width: 70px; height: 50px; position: relative; top: -5px"
-            ><img
-              src="assets/img/new-logo.png"
-              class="logo"
-              style="width: 60px; height: 60px"
-              alt=""
-          /></a>
-        </h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
-      </div>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
 
-      <nav id="navbar" class="navbar">
-        <ul>
-            @if (  $page != 'details')
-            <li><a class="nav-link scrollto active" href="#hero">{{ __('Home') }}</a></li>
+            <div id="logo" style="z-index: 100">
+                <h1><a href="/" class=" d-block logo-link"
+                        style="width: 880px;height: 80px;position: relative;top: -15px;"><img
+                            src="{{ asset('assets/img/new-logo.png') }}" class="logo"
+                            style=" width : 100px ;height : 100px; margin: -10px;" alt=""></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+            </div>
 
-            <li><a class="nav-link scrollto" href="#about">{{ __('About') }}</a></li>
-            <li><a class="nav-link scrollto" href="#services">{{ __('Services') }}</a></li>
-            <li><a class="nav-link scrollto " href="#portfolio">{{ __('Portfolio') }}</a></li>
-            {{-- <li><a class="nav-link scrollto" href="#team">{{ __('Team') }}</a></li> --}}
+            <nav id="navbar" class="navbar">
+                <ul>
+                    @if (  $page != 'details')
+                    <li><a class="nav-link scrollto active" href="#hero">{{ __('Home') }}</a></li>
 
-            <li><a class="nav-link scrollto" href="#contact">{{ __('Contact') }}</a></li>
+                    <li><a class="nav-link scrollto" href="#about">{{ __('About') }}</a></li>
+                    <li><a class="nav-link scrollto" href="#services">{{ __('Services') }}</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">{{ __('Portfolio') }}</a></li>
+                    {{-- <li><a class="nav-link scrollto" href="#team">{{ __('Team') }}</a></li> --}}
 
-            @else
-            <li><a class="nav-link scrollto active" href="{{route('home')}}">{{ __('Home') }}</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">{{ __('Contact') }}</a></li>
+
+                    @else
+                    <li><a class="nav-link scrollto active" href="{{route('home')}}">{{ __('Home') }}</a></li>
 
 
-            @endif
+                    @endif
 
-            @if (App::getLocale() == 'en')
-                <li><a class="nav-link scrollto" href="{{route('locale',['locale'=> 'ar'])}}">{{ __('Ar') }}</a></li>
-            @else
-                <li><a class="nav-link scrollto" href="{{route('locale',['locale'=> 'en'])}}">{{ __('En') }}</a></li>
-            @endif
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-    </div>
-  </header>
-  <!-- End Header -->
+                    @if (App::getLocale() == 'en')
+                        <li><a class="nav-link scrollto" href="{{route('locale',['locale'=> 'ar'])}}">{{ __('Ar') }}</a></li>
+                    @else
+                        <li><a class="nav-link scrollto" href="{{route('locale',['locale'=> 'en'])}}">{{ __('En') }}</a></li>
+                    @endif
+
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
 
     @yield('content')
 
