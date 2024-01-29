@@ -47,7 +47,7 @@
 
                     </div>
                     <div class="col-lg-6 about-img">
-                        <img src="{{asset("assets/img/steps.png")}}" alt="">
+                        <img src="{{ asset('assets/img/steps.png') }}" alt="">
                         <div class="col-lg-3 cta-btn-container ">
                             {{-- <a class="cta-btn btn btn-primary align-right float-right" href="#contact">{{__("Call Us")}}</a> --}}
                         </div>
@@ -238,11 +238,11 @@
             <div class="container" data-aos="zoom-out">
                 <div class="row">
                     <div class="col-lg-9 text-center text-lg-start">
-                        <h3 class="cta-title">{{__("Call Us")}}</h3>
-                        <p class="cta-text">{{__("call_action")}}</p>
+                        <h3 class="cta-title">{{ __('Call Us') }}</h3>
+                        <p class="cta-text">{{ __('call_action') }}</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#contact">{{__("Call Us")}}</a>
+                        <a class="cta-btn align-middle" href="#contact">{{ __('Call Us') }}</a>
                     </div>
                 </div>
             </div>
@@ -286,9 +286,13 @@
             </div>
 
             <div class="container mb-4">
-                <iframe
+                {{-- <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452"
-                    width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+                <iframe width="100%" height="380"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=46.72028303146363%2C24.835524532123838%2C46.740367412567146%2C24.848687720270302&amp;layer=mapnik"
+                    style="border: 1px solid black"></iframe><br />
+                {{-- <small><a href="https://www.openstreetmap.org/#map=16/24.8421/46.7303">View Larger Map</a></small> --}}
             </div>
 
             <div class="container">
