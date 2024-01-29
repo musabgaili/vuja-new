@@ -1,0 +1,105 @@
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero2 {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background: url("../img/second.jpg") no-repeat;
+  /* background: none; */
+  background-size: cover;
+  padding: 0;
+}
+
+#hero2 .hero2-content {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero2 .hero2-content h2 {
+  color: #1c5b63;
+  margin-bottom: 30px;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+#hero2 .hero2-content h2 span {
+  color: #e15731;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  #hero2 .hero2-content h2 {
+    font-size: 34px;
+  }
+}
+
+#hero2 .hero2-content .btn-get-started,
+#hero2 .hero2-content .btn-projects {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+}
+
+#hero2 .hero2-content .btn-get-started {
+  background: #1c1b1b;
+  border: 2px solid #1c1b1b;
+}
+
+#hero2 .hero2-content .btn-get-started:hover {
+  background: none;
+  color: #1c1b1b;
+}
+
+#hero2 .hero2-content .btn-projects {
+  background: #1c5b63;
+  border: 2px solid #1c5b63;
+}
+
+#hero2 .hero2-content .btn-projects:hover {
+  background: none;
+  color: #1c5b63;
+}
+
+#hero2 .hero2-slider {
+  z-index: 8;
+  height: 60vh;
+}
+
+#hero2 .hero2-slider::before {
+  content: "";
+  /* background-color: rgba(255 , 255 , 255 , 0.7); */
+  background-color: transparent;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 7;
+}
+
+#hero2 .hero2-slider .swiper2-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition-property: opacity;
+}
