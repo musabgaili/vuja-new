@@ -110,8 +110,12 @@
                 <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper align-items-center">
                         @foreach ($clients as $client)
-                            <div class="swiper-slide"><img src="{{ asset('storage/' . $client->thumbnail) }}"
-                                    class="img-fluid img-fluid-clients" alt="{{ $client->name }}"></div>
+                            <div class="swiper-slide hover-text">
+                                <img src="{{ asset('storage/' . $client->thumbnail) }}"
+                                    class="img-fluid img-fluid-clients " alt="{{ $client->name }}">
+
+                                    <span class="tooltip-text" id="top">{{$client->name}}</span>
+                            </div>
                         @endforeach
 
 
