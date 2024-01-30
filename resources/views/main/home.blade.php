@@ -47,7 +47,7 @@
 
                     </div>
                     <div class="col-lg-6 about-img">
-                        <img src="{{ asset('assets/img/steps.png') }}" alt="">
+                        <img src="{{ asset('assets/img/new-steps.png') }}" alt="">
                         <div class="col-lg-3 cta-btn-container ">
                             {{-- <a class="cta-btn btn btn-primary align-right float-right" href="#contact">{{__("Call Us")}}</a> --}}
                         </div>
