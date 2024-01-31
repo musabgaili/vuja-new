@@ -88,7 +88,7 @@ class PortfolioResource extends Resource
         return $table
             ->columns([
                 // TranslatableContainer::make(
-                    ImageColumn::make('thumbnail')->width(0)->height(0),
+                    ImageColumn::make('thumbnail'),
                 TextColumn::make("title"),
                 // ),
                 ToggleColumn::make("published"),
