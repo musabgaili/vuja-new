@@ -26,6 +26,16 @@
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+
+
+     <!-- Elmesseri font change here -->
+     <link href="https://fonts.cdnfonts.com/css/el-messiri?styles=18686" rel="stylesheet">
+     <style>
+       @import url('https://fonts.cdnfonts.com/css/el-messiri?styles=18686');
+       </style>
+       <!-- end of change -->
+
+
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/hero2.css') }}" rel="stylesheet">
@@ -59,23 +69,23 @@
       <div id="logo" style="z-index: 100">
         <h1>
           <a
-            href="index.html"
+            href="{{route('home')}}"
             class="d-block logo-link"
             style="width: 70px; height: 50px; position: relative; top: -5px"
             ><img
-              src="assets/img/new-logo.png"
+              src="{{asset('assets/img/new-logo.png')}}"
               class="logo"
               style="width: 60px; height: 60px"
               alt=""
           /></a>
         </h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+        <!-- <a href="{{route('home')}}"><img src="assets/img/logo.png" alt=""></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-            @if (  $page != 'details')
+            @if (  $page == 'home')
             <li><a class="nav-link scrollto active" href="#hero">{{ __('Home') }}</a></li>
 
             <li><a class="nav-link scrollto" href="#about">{{ __('About') }}</a></li>

@@ -17,4 +17,8 @@ class HomeController extends Controller
         $testimonials = Testimonial::where('visible',true)->get();
         return view("main.home",compact('services','portfolios','clients','testimonials'));
     }
+
+    function journey() {
+        return view('main.journey');
+    }
 }

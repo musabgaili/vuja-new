@@ -47,7 +47,22 @@
 
                     </div>
                     <div class="col-lg-6 about-img">
-                        <img src="{{ asset('assets/img/new-steps.png') }}" alt="">
+                        <!-- change here -->
+                        <!-- add class to img an add the button element with class -->
+                        <div class="col-12">
+                            {{-- <img src="https://vujadesa.com/assets/img/steps.png" alt="" class="img-fluid"> --}}
+                            <img src="{{ asset('assets/img/new-steps.png') }}" class=" d-none d-sm-none d-lg-block"
+                            alt="">
+                        <img src="{{ asset('assets/img/steps-small-screen.jpg') }}" alt=""
+                            class=" d-sm-block d-md-none d-lg-none">
+                        </div>
+                        {{-- <div class="col-5 offset-7 col-md-3 offset-md-9"> <button>Know More</button></div> --}}
+                        <div class="col-5 offset-7 col-md-3 offset-md-9"> <a href="{{route('journey')}}">{{__("Know More")}}</a></div>
+
+
+
+                        <!-- end of change -->
+
                         <div class="col-lg-3 cta-btn-container ">
                             {{-- <a class="cta-btn btn btn-primary align-right float-right" href="#contact">{{__("Call Us")}}</a> --}}
                         </div>
@@ -114,7 +129,7 @@
                                 <img src="{{ asset('storage/' . $client->thumbnail) }}"
                                     class="img-fluid img-fluid-clients " alt="{{ $client->name }}">
 
-                                    <span class="tooltip-text" id="top">{{$client->name}}</span>
+                                <span class="tooltip-text" id="top">{{ $client->name }}</span>
                             </div>
                         @endforeach
 

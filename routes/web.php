@@ -32,6 +32,9 @@ Auth::routes();
 Route::post('/contact', [ContactController::class ,'store'])->name('contact');
 
 
+Route::get('/journey', [HomeController::class , 'journey'])->name('journey');
+
+
 
 
 Route::get('language/{locale}', function ($locale = null) {
