@@ -179,7 +179,7 @@
                     @foreach ($portfolios as $item)
                         <div class="col-lg-4 col-md-6 portfolio-item ">
                             <a href="{{ route('portfolio.details', ['portfolio' => $item]) }}">
-                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="img-fluid" alt="">
+                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="img-fluid" height="600" width="800" alt="">
                                 <div class="portfolio-info">
                                     <h4>{{ $item->title }}</h4>
                                     {{-- <p>{!! Str::inlineMarkdown($item->content) !!}</p> --}}

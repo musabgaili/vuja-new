@@ -36,12 +36,12 @@
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
 
-                                <div class="swiper-slide">
+                                {{-- <div class="swiper-slide"> --}}
                                     <img src="{{ asset('storage/' . $portfolio->thumbnail) }}" alt="">
-                                </div>
+                                {{-- </div> --}}
 
                             </div>
-                            <div class="swiper-pagination"></div>
+                            {{-- <div class="swiper-pagination"></div> --}}
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@
                         <div class="portfolio-info">
                             <h3>{{ __('Project information') }}</h3>
                             <ul>
-                                <li><strong>{{ __('Categories') }}</strong>: {{ implode(',', $portfolio->category) }}
+                                <li><strong>{{ __('Category') }}</strong>: {{ implode(',', $portfolio->category) }}
                                 </li>
                                 @if ($portfolio->client)
                                     <li><strong>{{ __('Client') }}</strong>: {{ $portfolio->client }}</li>
