@@ -18,6 +18,7 @@ use Filament\Forms\Set;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
@@ -87,6 +88,7 @@ class PortfolioResource extends Resource
         return $table
             ->columns([
                 // TranslatableContainer::make(
+                    ImageColumn::make('thumbnail')->width(0)->height(0),
                 TextColumn::make("title"),
                 // ),
                 ToggleColumn::make("published"),
