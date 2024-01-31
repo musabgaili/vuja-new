@@ -1724,3 +1724,134 @@ section {
         left: 23%;
     }
 }
+
+
+
+/* Start product design */
+* {
+    box-sizing: border-box;
+  }
+
+
+
+  .product .landing{
+    height: 700px;
+    transition: all 0.5s;
+    z-index: 997;
+    background-image: url("../img/JMDA-Product-Design-Services-diagram2-e1474453863484.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(90, 100, 110);
+  }
+  .product .landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+  }
+  .product .intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  .product .intro h1 {
+    margin-bottom: 70px;
+    font-size: 49px;
+  }
+  .product .intro h1:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -24px;
+    width: 85px;
+    height: 4px;
+    background-color: var(--green-color);
+  }
+  .product .intro p {
+    line-height: 2;
+  }
+  @media (max-width: 600px) {
+    .product .intro p {
+      display: none;
+    }
+  }
+  .product .contextual svg {
+    width: 100px;
+    height: 100px;
+  }
+  .product .contextual div h1 {
+    margin-left: 15px;
+    color: var(--header-color);
+  }
+  .product .contextual div h1::after {
+    position: absolute;
+    content: "";
+    bottom: -8px;
+    width: 28px;
+    height: 3px;
+    background-color: var(--green-color);
+    left: 0;
+  }
+  .product .contextual > p {
+    color: var(--header-color);
+  }
+  /* .row div:not(.contextual){
+      margin-bottom: 20px;
+    } */
+  .product .footer {
+    height: 800px;
+    background-color: var(--footer-color);
+  }
+  .product .footer .row h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--green-color);
+  }
+  .product .footer .privacy {
+    color: var(--green-color);
+  }
+  .product .footer ul li {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .product .footer .sitemap ul li:hover {
+    color: var(--green-color);
+  }
+  .product .footer .latest-news ul li span:hover {
+    color: var(--green-color);
+  }
+  .product .footer .info input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    height: 40px;
+  }
+  .product .footer .info input:focus {
+    outline: none;
+    border-color: var(--green-color);
+  }
+  .product .footer .info input[type="submit"] {
+    color: var(--green-color);
+    transition: 0.5s;
+  }
+  .product .footer .info input[type="submit"]:hover {
+    background-color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    .product .footer {
+      height: 350px;
+    }
+  }
+
+  /* end product design */
