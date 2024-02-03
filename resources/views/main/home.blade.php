@@ -53,8 +53,7 @@
                             {{-- <img src="https://vujadesa.com/assets/img/steps.png" alt="" class="img-fluid"> --}}
                             <img src="{{ asset('assets/img/new-steps.png') }}" class=" d-none d-sm-none d-lg-block"
                             alt="">
-                        <img src="{{ asset('assets/img/steps-small-screen.jpg') }}" alt=""
-                            class=" d-sm-block d-md-none d-lg-none">
+                        <img src="{{ asset('assets/img/steps-small-screen.jpg') }}" alt="" class=" d-sm-block d-md-none d-lg-none">
                         </div>
                         {{-- <div class="col-5 offset-7 col-md-3 offset-md-9"> <button>Know More</button></div> --}}
                         <div class="col-5 offset-7 col-md-3 offset-md-9"> <a href="{{route('journey')}}">{{__("Know More")}}</a></div>
