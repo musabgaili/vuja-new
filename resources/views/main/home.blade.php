@@ -32,13 +32,12 @@
             <div class="container" data-aos="fade-up">
                 <div class="row">
 
-                    <div class="col-lg-6 content">
+                    <div class="col-lg-12 content">
 
                         <h2>{{ __('topic_') }}</h2>
                         {{-- <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
                             anim id est laborum.</h3> --}}
-
-                        <ul>
+                        <ul lang="{{App::getLocale()}}">
                             <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['1'] }}</li>
                             <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['2'] }}</li>
                             <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['3'] }}</li>
@@ -46,7 +45,7 @@
                         </ul>
 
                     </div>
-                    <div class="col-lg-6 about-img">
+                    <div class="col-lg-12 about-img">
                         <!-- change here -->
                         <!-- add class to img an add the button element with class -->
                         <div class="col-12">
@@ -57,11 +56,7 @@
                         </div>
                         {{-- <div class="col-5 offset-7 col-md-3 offset-md-9"> <button>Know More</button></div> --}}
                         <div class="col-5 offset-7 col-md-3 offset-md-9"> <a href="{{route('journey')}}">{{__("Know More")}}</a></div>
-
-
-
                         <!-- end of change -->
-
                         <div class="col-lg-3 cta-btn-container ">
                             {{-- <a class="cta-btn btn btn-primary align-right float-right" href="#contact">{{__("Call Us")}}</a> --}}
                         </div>
