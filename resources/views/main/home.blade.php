@@ -37,7 +37,7 @@
                         <h2>{{ __('topic_') }}</h2>
                         {{-- <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
                             anim id est laborum.</h3> --}}
-                        <ul lang="{{App::getLocale()}}">
+                        <ul lang="{{ App::getLocale() }}">
                             <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['1'] }}</li>
                             <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['2'] }}</li>
                             <li><i class="bi bi-check-circle"></i> {{ __('we_offer')['3'] }}</li>
@@ -51,11 +51,13 @@
                         <div class="col-12">
                             {{-- <img src="https://vujadesa.com/assets/img/steps.png" alt="" class="img-fluid"> --}}
                             <img src="{{ asset('assets/img/new-steps.png') }}" class=" d-none d-sm-none d-lg-block"
-                            alt="">
-                        <img src="{{ asset('assets/img/steps-small-screen.jpg') }}" alt="" class=" d-sm-block d-md-none d-lg-none">
+                                alt="">
+                            <img src="{{ asset('assets/img/steps-small-screen.jpg') }}" alt=""
+                                class=" d-sm-block d-md-none d-lg-none">
                         </div>
                         {{-- <div class="col-5 offset-7 col-md-3 offset-md-9"> <button>Know More</button></div> --}}
-                        <div class="col-5 offset-7 col-md-3 offset-md-9"> <a href="{{route('journey')}}">{{__("Know More")}}</a></div>
+                        <div class="col-5 offset-7 col-md-3 offset-md-9"> <a
+                                href="{{ route('journey') }}">{{ __('Know More') }}</a></div>
                         <!-- end of change -->
                         <div class="col-lg-3 cta-btn-container ">
                             {{-- <a class="cta-btn btn btn-primary align-right float-right" href="#contact">{{__("Call Us")}}</a> --}}
@@ -173,7 +175,8 @@
                     @foreach ($portfolios as $item)
                         <div class="col-lg-4 col-md-6 portfolio-item ">
                             <a href="{{ route('portfolio.details', ['portfolio' => $item]) }}">
-                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="img-fluid" height="600" width="800" alt="">
+                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="img-fluid" height="600"
+                                    width="800" alt="">
                                 <div class="portfolio-info">
                                     <h4>{{ $item->title }}</h4>
                                     {{-- <p>{!! Str::inlineMarkdown($item->content) !!}</p> --}}
@@ -193,6 +196,65 @@
 
             </div>
         </section><!-- End Portfolio Section -->
+
+
+
+        <!-- ======= Products Section ======= -->
+        <section id="clients">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h2>{{ __('Our Products') }}</h2>
+                    {{-- <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet
+                        veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute
+                        nulla ipsum velit export irure minim illum fore</p> --}}
+                </div>
+
+                <style>
+                    .img-fluid-clients {
+                        height: 150px;
+                    }
+                </style>
+
+                <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide hover-text">
+                            <a href="https://turn-sa.net">
+                                <img src="{{ asset('assets/img/products/turn.jpg') }}" class="img-fluid img-fluid-clients "
+                                    alt="Turn "></a>
+                            {{-- <span class="tooltip-text" id="top"> Turn </span> --}}
+                        </div>
+
+                        <div class="swiper-slide hover-text">
+                            <a href="https://edu.vujadesa.com">
+                                <img src="{{ asset('assets/img/products/edu.jpg') }}"
+                                    class="img-fluid img-fluid-clients " alt="Education "></a>
+                            {{-- <span class="tooltip-text" id="top"> Vujade Education </span> --}}
+                        </div>
+
+
+
+                        {{-- <div class="swiper-slide"><img src="assets/img/clients/client-2.png"
+                                class="img-fluid img-fluid-clients" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-3.png"
+                                class="img-fluid img-fluid-clients" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-4.png"
+                                class="img-fluid img-fluid-clients" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-5.png"
+                                class="img-fluid img-fluid-clients" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-6.png"
+                                class="img-fluid img-fluid-clients" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-7.png"
+                                class="img-fluid img-fluid-clients" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-8.png"
+                                class="img-fluid img-fluid-clients" alt=""></div> --}}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Clients Section -->
+
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials">
