@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 // Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('portfolio/{portfolio}', [PortfolioController::class ,'details'])->name('portfolio.details');
@@ -37,11 +37,16 @@ Route::get('/journey', [HomeController::class , 'journey'])->name('journey');
 
 
 
-Route::get('language/{locale}', function ($locale = null) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
+// Route::get('language/{locale}', function ($locale = null) {
+//     app()->setLocale($locale);
+//     session()->put('locale', $locale);
 
-    return redirect()->back();
+//     return redirect()->back();
+// })->name('locale');
+
+
+Route::get('/locale/{locale}', function () {
+        return 'ok';
 })->name('locale');
 
 

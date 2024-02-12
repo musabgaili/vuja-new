@@ -345,7 +345,7 @@
                         <div class="contact-phone">
                             <i class="bi bi-phone"></i>
                             <h3>{{ __('Phone') }}</h3>
-                            <p><a href="tel:+966544615194">+966544615194</a></p>
+                            <p><a href="tel:+966540066688">+966540066688</a></p>
                         </div>
                     </div>
 
