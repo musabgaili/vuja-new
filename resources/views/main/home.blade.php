@@ -232,6 +232,13 @@
                             {{-- <span class="tooltip-text" id="top"> Vujade Education </span> --}}
                         </div>
 
+                        <div class="swiper-slide hover-text">
+                            <a href="https://cropsense.xyz">
+                                <img src="{{ asset('assets/img/products/cropsense.png') }}"
+                                    class="img-fluid img-fluid-clients " alt="Education "></a>
+                            {{-- <span class="tooltip-text" id="top"> Vujade Education </span> --}}
+                        </div>
+
 
 
                         {{-- <div class="swiper-slide"><img src="assets/img/clients/client-2.png"
