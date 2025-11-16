@@ -37,17 +37,14 @@ Route::get('/journey', [HomeController::class , 'journey'])->name('journey');
 
 
 
-// Route::get('language/{locale}', function ($locale = null) {
-//     app()->setLocale($locale);
-//     session()->put('locale', $locale);
+ Route::get('language/{locale}', function ($locale = null) {
+     app()->setLocale($locale);
+     session()->put('locale', $locale);
 
-//     return redirect()->back();
-// })->name('locale');
+     return redirect()->back();
+ })->name('locale');
 
 
-Route::get('/locale/{locale}', function () {
-        return 'ok';
-})->name('locale');
 
 
 

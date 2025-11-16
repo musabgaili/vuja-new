@@ -106,6 +106,7 @@
             @else
                 <li><a class="nav-link scrollto" href="{{route('locale',['locale'=> 'en'])}}">{{ __('En') }}</a></li>
             @endif
+            <li><a class="nav-link scrollto" href="https://portal.vujadesa.com">{{ __('portal') }}</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

@@ -219,7 +219,7 @@
                     <div class="swiper-wrapper align-items-center">
 
                         <div class="swiper-slide hover-text">
-                            <a href="https://turn-sa.net">
+                            <a href="https://turn.vujadesa.com">
                                 <img src="{{ asset('assets/img/products/turn.jpg') }}" class="img-fluid img-fluid-clients "
                                     alt="Turn "></a>
                             {{-- <span class="tooltip-text" id="top"> Turn </span> --}}
@@ -233,10 +233,17 @@
                         </div>
 
                         <div class="swiper-slide hover-text">
-                            <a href="https://cropsense.xyz">
+                            <a href="https://cropsense.vujadesa.com">
                                 <img src="{{ asset('assets/img/products/cropsense.png') }}"
                                     class="img-fluid img-fluid-clients " alt="Education "></a>
-                            {{-- <span class="tooltip-text" id="top"> Vujade Education </span> --}}
+                            {{-- <span class="tooltip-text" id="top"> Cropsense </span> --}}
+                        </div>
+                      
+                       <div class="swiper-slide hover-text">
+                            <a href="https://doorstep.vujadesa.com">
+                                <img src="{{ asset('assets/img/products/doorstep.png') }}"
+                                    class="img-fluid img-fluid-clients " alt="Education "></a>
+                            {{-- <span class="tooltip-text" id="top"> DoorStepView </span> --}}
                         </div>
 
 
